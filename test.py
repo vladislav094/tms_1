@@ -10,6 +10,7 @@ def test_checkout_branch():
 print(test_checkout_branch())
 
 
+print('Test text')
 
 
 
