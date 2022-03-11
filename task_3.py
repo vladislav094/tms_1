@@ -1,3 +1,4 @@
+# Tasks 3
 # Types data
 
 var_int = 10
@@ -13,7 +14,7 @@ print(big_int)
 print(var_float)
 print(var_str)
 
-#String
+# String
 
 #1 
 variable_str = 'Zxcvbnmqwe'
@@ -44,7 +45,7 @@ print(variable_str_2.startswith('Hello'))
 print(variable_str_2.endswith('qwe'))
 
 
-#HW_3
+# HW_3
 
 #1
 string = 'www.my_site.com#about'
@@ -52,10 +53,16 @@ correct_string = string.replace('#', '/')
 print(string)
 print(correct_string)
 
-#2
+#2 v1  
 text = ['items', 'lists', 'words', 'books', '']
 print('ing '.join(text))
 print(' ')
+
+#2 v2
+words = 'items', 'lists', 'words', 'books'
+result = 'ing '.join(words)
+print(result)
+
 
 #3 v1
 full_name = 'Ivanou Ivan'
