@@ -2,6 +2,7 @@
 # List
 #1
 from hashlib import new
+from xmlrpc.client import Boolean
 
 
 arr1 = ['abc', 'cba', 'qwe', 'abra', 'asd']
@@ -48,5 +49,32 @@ print(arr_a_b)
 #         arr_a_b.append(i)
 #8
 new_arr = [1, 2, 3, 4, 3, 2, 5, 1, 4, 6, 7, 1, 8, 2, 3]
-new_arr = set(new_arr)
+new_arr = list(set(new_arr))
 print(new_arr)
+
+# Logical operators
+#1
+first = 2201
+second = 1745
+#2
+# first part with AND
+if first > 1000 and second > 1000 and 2 + first >= 2203 and second + 5 >= 1750:
+    print(True)
+if first - second > 0 and second - first < 0:
+    print(True)
+# second part    
+if first > second and second > first:
+    print(True)
+else:
+    print(False)
+if first + second / 3 == 312 and first - second + 44 == 312:
+    print(True)
+else:
+    print(False)
+#3 
+# first part with OR
+if first * 2 + first / 2 <= first * 2 + first / 4 or first + second == 3940 + 6:
+    print(True)
+
+
+
