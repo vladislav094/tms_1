@@ -5,13 +5,10 @@ def test_checkout_branch():
     b = 3
     c = a + b
     d = c / b
-    return d 
+    print(d) 
 
-print(test_checkout_branch())
-sdasd
-
+test_checkout_branch()
 print('Test text')
-
 print("Hi")
 
 

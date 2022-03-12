@@ -11,7 +11,7 @@ var_str = var_str + var_str + var_str_yes * 4
 print(var_int / var_float)
 print(big_int / var_float)
 print(big_int)
-print(var_float)
+print(round(var_float,2))
 print(var_str)
 
 # String
@@ -34,7 +34,7 @@ print(variable_str_2[::-1])
 
 #3
 name = 'Vlad'
-my_name = 'My name is ' + name
+my_name = (f'My name is {name}')
 print(my_name)
 
 #4
