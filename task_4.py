@@ -1,8 +1,7 @@
 # Task_4 
 # List
 #1
-from hashlib import new
-from xmlrpc.client import Boolean
+from tkinter.tix import Tree
 
 
 arr1 = ['abc', 'cba', 'qwe', 'abra', 'asd']
@@ -62,7 +61,7 @@ if first > 1000 and second > 1000 and 2 + first >= 2203 and second + 5 >= 1750:
     print(True)
 if first - second > 0 and second - first < 0:
     print(True)
-# second part    
+# second part with AND
 if first > second and second > first:
     print(True)
 else:
@@ -73,8 +72,58 @@ else:
     print(False)
 #3 
 # first part with OR
-if first * 2 + first / 2 <= first * 2 + first / 4 or first + second == 3940 + 6:
+if first + second == 1 or first * second > 0:
     print(True)
+else:
+    print(False)
+if first * 2 + second * 2 == 7892 or first * 2 + second * 2 == 7893:
+    print(True)
+else:
+    print(False)
+# second part with OR
+if first * 2 + first / 2 <= first * 2 + first / 4 or first + second == 3940 + 62:
+    print(True)
+else:
+    print(False)
+if (first + second) / 2 + (first / 3 + second * 2.2) <= 1328 or first / second + 22 == 1388:
+    print(True)
+else:
+    print(False)
+#4 
+a = 'str'
+b = 'ing'
+c = 'pass'
+d = 'word'
+a_b = 'string'
+c_d = 'password'
+if a + b == 'string' or c + d == 'pasword':
+    print(True)
+if a + b == 'teach' and c + d == 'pasword':
+    print(True)
+else:
+    print(False)
+if a + b == a_b and c + d == c_d:
+    print(True)
+else:
+    print(False)
+
+# Dictionary
+school = {'1a': 17, '2b': 22, '3f': 9,
+          '4d': 25, '5n': 11, '6c': '28',
+          '7g': 7, '8a': 13 , '9c': 10,
+          '10w': 21}
+print(school)
+print(school['1a'])
+# school = school.fromkeys(['2b', '5n', '3f'], 41)
+school.update({'1a': 121, '4d': 2, '8a': 118})
+print(school)
+school.update({'44z': 228})
+print(school)
+school['23sh']= 8
+print(school)
+school.pop('23sh')
+del school['44z']
+print(school)
 
 
 

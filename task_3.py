@@ -2,7 +2,7 @@
 # Types data
 
 var_int = 10
-var_float = 8.3
+var_float = 8.4
 var_str = 'No'
 var_str_yes = 'Yes'
 big_int = var_int * 3.5
@@ -28,6 +28,9 @@ print(len(variable_str))
 variable_str_2 = 'HelloWorldMyNameIsGoodvin'
 print(variable_str_2[0:8])
 print(len(variable_str_2))
+variable_str_3 = int(len(variable_str_2) / 2)
+print(variable_str_3)
+print(variable_str_2[(variable_str_3 - 2): (variable_str_3 + 2)])
 print(variable_str_2[12:16])
 print(variable_str_2[::3])
 print(variable_str_2[::-1])
@@ -38,8 +41,9 @@ my_name = (f'My name is {name}')
 print(my_name)
 
 #4
-test_tring = 'Hello world!'
-print(test_tring.find('w'))
+test_string = 'Hello world!'
+print(test_string.index.__doc__)
+print(test_string.find('w'))
 print(variable_str_2.count('l'))
 print(variable_str_2.startswith('Hello'))
 print(variable_str_2.endswith('qwe'))
