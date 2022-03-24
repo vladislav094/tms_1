@@ -1,10 +1,6 @@
-# d = {'EUR': 2, 'USD': 0.75, 'BYN': 0.32, 'CAD': 1.23, 'RUB': 0.12}
-# for k, v in d.items():
-#     print(k + 'qwe')
-
-
-from cgi import test
-
+d = {'EUR': 2, 'USD': 0.75, 'BYN': 0.32, 'CAD': 1.23, 'RUB': 0.12}
+for k, v in d.items():
+    print(k + 'qwe')
 
 var_int = 10
 var_float = 8.4
@@ -42,3 +38,5 @@ test_string = 'Hello world!'
 print(test_string.find('w'))
 print(test_string.count("l"))
 print(test_string)
+
+

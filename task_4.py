@@ -1,9 +1,6 @@
 # Task_4 
 # List
 #1
-from tkinter.tix import Tree
-
-
 arr1 = ['abc', 'cba', 'qwe', 'abra', 'asd']
 arr2 = ['zxc', 'csq', 'adq', 'asqw', 'sdx']
 arr3 = [1, 2, 3, 4, 5]
@@ -18,11 +15,15 @@ print(arr2)
 arr5 = arr1 + arr2
 print(arr5)
 #5
-arr6 = arr5[::3]
+# arr6 = arr5[::3] 
+arr6 = arr5[0:7:3]
 print(arr6)
 #6 v1
-arr6.append('blablacar')
-arr6.append('magazine')
+arr7 = ['one', 'two']
+arr6.extend(arr7)
+# arr6.append('blablacar')
+# print(arr6)
+# arr6.append('magazine')
 print(arr6)
 #6 v2
 arr6.insert(3,'STQB')
@@ -39,7 +40,7 @@ print(arr6)
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 arr_a_b = list(set(a) & set(b))
-print(arr_a_b)
+print(arr_a_b, 1)
 #7 v2
 # It is example cycle for future
 # arr_a_b = []
@@ -48,8 +49,8 @@ print(arr_a_b)
 #         arr_a_b.append(i)
 #8
 new_arr = [1, 2, 3, 4, 3, 2, 5, 1, 4, 6, 7, 1, 8, 2, 3]
-new_arr = list(set(new_arr))
-print(new_arr)
+new_arr_set = list(set(new_arr))
+print(new_arr_set)
 
 # Logical operators
 #1
@@ -58,37 +59,37 @@ second = 1745
 #2
 # first part with AND
 if first > 1000 and second > 1000 and 2 + first >= 2203 and second + 5 >= 1750:
-    print(True)
+    print(True, 1)
 if first - second > 0 and second - first < 0:
-    print(True)
+    print(True, 2)
 # second part with AND
 if first > second and second > first:
-    print(True)
+    print(True, 3)
 else:
-    print(False)
+    print(False, 3)
 if first + second / 3 == 312 and first - second + 44 == 312:
-    print(True)
+    print(True, 4)
 else:
-    print(False)
+    print(False, 4)
 #3 
 # first part with OR
 if first + second == 1 or first * second > 0:
-    print(True)
+    print(True, 5)
 else:
-    print(False)
-if first * 2 + second * 2 == 7892 or first * 2 + second * 2 == 7893:
-    print(True)
+    print(False, 5)
+if ((first * 2) + (second * 2) == 7892) or ((first * 2) + (second * 2) == 7893):
+    print(True, 6)
 else:
-    print(False)
+    print(False, 6)
 # second part with OR
 if first * 2 + first / 2 <= first * 2 + first / 4 or first + second == 3940 + 62:
-    print(True)
+    print(True, 7)
 else:
-    print(False)
+    print(False, 7)
 if (first + second) / 2 + (first / 3 + second * 2.2) <= 1328 or first / second + 22 == 1388:
-    print(True)
+    print(True, 8)
 else:
-    print(False)
+    print(False, 8)
 #4 
 a = 'str'
 b = 'ing'
@@ -96,16 +97,18 @@ c = 'pass'
 d = 'word'
 a_b = 'string'
 c_d = 'password'
-if a + b == 'string' or c + d == 'pasword':
-    print(True)
+if ((a + b) == ('string' or c + d) == 'pasword'):
+    print(True, 9)
+else:
+    print(False, 9)
 if a + b == 'teach' and c + d == 'pasword':
-    print(True)
+    print(True, 10)
 else:
-    print(False)
+    print(False, 10)
 if a + b == a_b and c + d == c_d:
-    print(True)
+    print(True, 11)
 else:
-    print(False)
+    print(False, 11)
 
 # Dictionary
 school = {'1a': 17, '2b': 22, '3f': 9,
@@ -114,7 +117,8 @@ school = {'1a': 17, '2b': 22, '3f': 9,
           '10w': 21}
 print(school)
 print(school['1a'])
-# school = school.fromkeys(['2b', '5n', '3f'], 41)
+school_1 = school.fromkeys(['2b', '5n', '3f'], 41)
+print('fromkeys for school', school_1) 
 school.update({'1a': 121, '4d': 2, '8a': 118})
 print(school)
 school.update({'44z': 228})
