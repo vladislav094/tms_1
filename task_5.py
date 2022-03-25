@@ -53,23 +53,23 @@
 
 # WHILE
 # 1
-# i = 0 
-# number = 21
-# first = 1
-# second = 1
-# lists = []
-# while i <= number:
-#     if (i <= 1):
-#         next = first
-#     else:
-#         next = first + second
-#         print( first, second, next)
-#         first = second 
-#         second = next
-#         """"Метод append добавляет в писок list полученные значения next"""
-#         lists.append(next)
-#     # print(next)
-#     i += 1
+i = 0 
+number = 21
+first = 1
+second = 1
+lists = []
+while i <= number:
+    if (i <= 1):
+        next = first
+    else:
+        next = first + second
+        # print( first, second, next)
+        first = second 
+        second = next
+        """"Метод append добавляет в список list полученные значения из переменной next"""
+        lists.append(next)
+    print(next)
+    i += 1
 # print(lists[4:])
 
 # 2
@@ -82,13 +82,13 @@
 #     i +=1
     
 # 3
-i = -1 
-num = -21
-while i >= num:
-    if i // i == 1:
-        print(i)
-    i -= 2
-    # print(i)
+# i = -1 
+# num = -21
+# while i >= num:
+#     """"Цикл выводит каждое третье число от -1 до -21 """
+#     if i // i == 1:
+#         print(i)
+#     i -= 2
 
 # zero = []
 # several_likes = ['Ant', 'Few', 'Quz', 'Sum']
