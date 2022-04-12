@@ -122,28 +122,32 @@
 
 
 # #7
-# def check_coupon(entered_code, correct_code, current_date, expiration_date):
-#     a = 123
-
-def check_password():
-    username = input(f"Введите имя: ")
-    password = input(f"Введите пароль: ")
-    if len(password) < 8:
-        print(f"Пароль слишком короткий")
-        return False
-    elif username in password:
-        print(f"Пароль содержит имя пользователя")
-        return False
+def check_coupon():
+    """
+    Функция проверяет, что введен правильный купон и он ещё действителен
+    """
+    ent = []
+    entered_code = input(f"Введите код: ")
+    correct_code = '123'
+    current_date = input(f"Введите месяц: ")
+    ent.append(current_date)
+    i = 0
+    while i < 2:
+        current_date = int(input(f"Введите число: "))
+        ent.append(current_date)
+        i += 1    
+    expiration_date = ['July', 9, 2015]
+    print(ent)
+    print(expiration_date)
+    if entered_code == correct_code and ent >= expiration_date:
+        print(True)
     else:
-        print(f"Пароль для пользователя {username} порошёл все проверки")
-        return True
-
-check_password()
+        print(False)
+check_coupon()
 
 
 
-
-
+# #8
 # list_1 = ["Mallard", "Hook Bill", "African", "Crested", "Pilgrim", "Toulouse", "Blue Swedish"] 
 # exclude = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
 

@@ -59,7 +59,7 @@ for k in text_a:
         m = k
 print(f"{text}=={m}")
 
-# 2й способ добавления строки в словарь 
+# *2.1 2й способ добавления строки в словарь 
 # text_b = {}
 # for i in text:
 #     if i in text_b:
