@@ -161,14 +161,7 @@
 # Square.lists = 123
 # print(Square.s_list)
 
-text_1= "the-stealth-warrior"
-text_2 = "ThE_STealth_Warrior"
-def to_camel_case(text):
-    str = text
-    str = str.replace('-', '').replace('_', '')
-    return str
 
-print(to_camel_case(text_2))
 
 
 

@@ -141,34 +141,87 @@
 # g.population(bith_rate=3)
 
 
-class Shop:
-    all_price = []
-    def __init__(self, item, price):
-        self.item = item
-        self._price = price
-        self.all_price.append(self._price)
+# class Shop:
+#     all_price = []
+#     def __init__(self, item, price):
+#         self.item = item
+#         self._price = price
+#         self.all_price.append(self._price)
+#
+#     @property
+#     def add_price(self):
+#         return self._price
+#
+#     @add_price.setter
+#     def add_price(self, value):
+#         self.all_price.append(value)
+#
+#     @classmethod
+#     def sum_overall_price(cls):
+#         return sum(cls.all_price)
+#
+# s1 = Shop('Book', 1234)
+# s2 = Shop('Newspaper', 31)
+# s3 = Shop('Pencil', 41)
+# s1.add_price = 441
+# s2.add_price = 100
+# s3.add_price = 78
+# print(Shop.all_price)
+# print(s1.item, s1._price)
+# print(Shop.sum_overall_price())
+# print(s1.price)
 
-    @property
-    def add_price(self):
-        return self._price
+import random
+class Units:
+    """
+    Родительский класс
+    """
+    def __init__(self, id, team):
+        self.id = id
+        self.team = team
 
-    @add_price.setter
-    def add_price(self, value):
-        self.all_price.append(value)
+class Hero(Units):
+    def __init__(self, id, team, lvl):
+        Units.__init__(self, id, team)
+        self.lvl = lvl
 
-    @classmethod
-    def sum_overall_price(cls):
-        return sum(cls.all_price)
+    def level_up(self):
+        """Метод повышает уровень героя"""
+        self.lvl += 1
+        print(f"Уровень героя № {self.id} увеличен на 1 и равен {self.lvl}")
 
-s1 = Shop('Book', 1234)
-s2 = Shop('Newspaper', 31)
-s3 = Shop('Pencil', 41)
-s1.add_price = 441
-s2.add_price = 100
-s3.add_price = 78
-print(Shop.all_price)
-print(s1.item, s1._price)
-print(Shop.sum_overall_price())
+class Solder(Units):
+    def move_to_hero(self, Hero):
+        """Метод показывает ID солдата, который следует за героем"""
+        print(f"Солдат № {self.id} следует за Героем № {Hero.id}")
+
+def gener_solder():
+    """Функция генерирует 33 экземпляра класса Solder
+    и в случайном порядке распределяет в списки (team_red, team_blue)"""
+    for elt in range(33):
+        numb = random.randint(1, 2)
+        if numb == 1:
+            team_red.append(Solder(elt, 'Red'))
+        else:
+            team_blue.append(Solder(elt, 'Blue'))
+def up_level():
+    """Функция увеличивает уровень героя, у которого команда солдат больше чем у противника"""
+    if len(team_red) > len(team_blue):
+        h1.level_up()
+    else:
+        h2.level_up()
+
+h1 = Hero(1, 'Red', 1)
+h2 = Hero(2, 'Blue', 1)
+team_red = []
+team_blue = []
+gener_solder()
+up_level()
+gener_solder()
+up_level()
+random.choice(team_red).move_to_hero(h1)
+random.choice(team_blue).move_to_hero(h2)
+
 
 
 
