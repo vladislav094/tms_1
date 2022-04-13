@@ -15,5 +15,44 @@
 # print(r)
 
 
-print(sorted([(1, 'value'),(2, 'end')], key=lambda x: x[1]))
+# print(sorted([(1, 'value'),(2, 'end')], key=lambda x: x[1]))
 
+
+class Shop:
+
+    all_products = []
+    all_prices = []
+
+    def __init__(self, title):
+        self.title = title
+        self._price = 0
+        self.all_products.append(self)
+
+    @property
+    def price(self):
+        return self._price
+
+    @price.setter
+    def price(self, value):
+        self._price = value
+        self.all_prices.append(value)
+
+    @classmethod
+    def sum_overall_price(cls):
+        overall_price = sum(cls.all_prices)
+        return overall_price
+    
+
+google_pixel_5 = Shop('Google Pixel 5')
+google_pixel_5.price = 500
+
+google_pixel_6 = Shop('Google Pixel 6')
+google_pixel_6.price = 1000
+
+google_pixel_7 = Shop('Google Pixel 7')
+google_pixel_7.price = 250
+
+# google_pixel_5 = Shop('Google Pixel 5')
+google_pixel_5.price = 123
+
+print(Shop.sum_overall_price())

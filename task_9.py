@@ -142,20 +142,34 @@
 
 
 class Shop:
+    all_price = []
     def __init__(self, item, price):
-        self.__item = item
-        self.__price = price
+        self.item = item
+        self._price = price
+        self.all_price.append(self._price)
 
     @property
-    def sum_overall_price(self):
-        return sum(self.__price)
-    @sum_overall_price.setter
-    def sum_overall_price(self, price):
-        self.__price = price
+    def add_price(self):
+        return self._price
+
+    @add_price.setter
+    def add_price(self, value):
+        self.all_price.append(value)
+
+    @classmethod
+    def sum_overall_price(cls):
+        return sum(cls.all_price)
 
 s1 = Shop('Book', 1234)
-s1.sum_overall_price = [30, 20, 11, 17]
-print(s1.sum_overall_price, s1.__dict__)
+s2 = Shop('Newspaper', 31)
+s3 = Shop('Pencil', 41)
+s1.add_price = 441
+s2.add_price = 100
+s3.add_price = 78
+print(Shop.all_price)
+print(s1.item, s1._price)
+print(Shop.sum_overall_price())
+
 
 
     
