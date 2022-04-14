@@ -75,53 +75,47 @@
 # print(ac1.__name)
 # print(ac1.__balance)
 # print(ac1.__passport)
-import random
-class Units:
-    def __init__(self, id, team):
-        self.id = id
-        self.team = team
-
-class Hero(Units):
-    def __init__(self, id, team, lvl):
-        Units.__init__(self, id, team)
-        self.lvl = lvl
-
-    def level_up(self):
-        self.lvl += 1
-        print(f'Уровень героя №{self.id} увеличен на 1 и равен {self.lvl}')
-
-class Solder(Units):
-    def move_to_hero(self, Hero):
-        print(f"Солдат №{self.id} следует за героем {Hero.id}")
-def add_solders():
-    for elt in range(17):
-        numb = random.randint(1,2)
-        if numb == 1:
-            team_hero_1.append(Solder(elt, 'red'))
-        else:
-            team_hero_2.append(Solder(elt, 'blue'))
-
-def up_level():
-    if len(team_hero_1) > len(team_hero_2):
-        Hero.level_up(h1)
-    else:
-        Hero.level_up(h2)
-h1 = Hero(1, 'red', 1)
-h2 = Hero(2, 'blue', 1)
-team_hero_1 = []
-team_hero_2 = []
-add_solders()
-up_level()
-add_solders()
-up_level()
-random.choice(team_hero_1).move_to_hero(h1)
-random.choice(team_hero_2).move_to_hero(h2)
-
-
-
-
-
-
+# import random
+# class Units:
+#     def __init__(self, id, team):
+#         self.id = id
+#         self.team = team
+#
+# class Hero(Units):
+#     def __init__(self, id, team, lvl):
+#         Units.__init__(self, id, team)
+#         self.lvl = lvl
+#
+#     def level_up(self):
+#         self.lvl += 1
+#         print(f'Уровень героя №{self.id} увеличен на 1 и равен {self.lvl}')
+#
+# class Solder(Units):
+#     def move_to_hero(self, Hero):
+#         print(f"Солдат №{self.id} следует за героем {Hero.id}")
+# def add_solders():
+#     for elt in range(17):
+#         numb = random.randint(1,2)
+#         if numb == 1:
+#             team_hero_1.append(Solder(elt, 'red'))
+#         else:
+#             team_hero_2.append(Solder(elt, 'blue'))
+#
+# def up_level():
+#     if len(team_hero_1) > len(team_hero_2):
+#         Hero.level_up(h1)
+#     else:
+#         Hero.level_up(h2)
+# h1 = Hero(1, 'red', 1)
+# h2 = Hero(2, 'blue', 1)
+# team_hero_1 = []
+# team_hero_2 = []
+# add_solders()
+# up_level()
+# add_solders()
+# up_level()
+# random.choice(team_hero_1).move_to_hero(h1)
+# random.choice(team_hero_2).move_to_hero(h2)
 
 # class Soldiers():
 #     id_ = 1
