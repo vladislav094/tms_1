@@ -27,7 +27,7 @@ lable.pack()
 frame_input = Frame(root, bg='orange', bd=0)
 # Также указываем его расположение
 frame_input.place(relx=0.15, rely=0.22, relwidth=0.7, relheight=0.25)
-# Создаем текстовое поле для получения данных от пользователя
+# Создаем текстовое поле для получения данных от пользователя.
 info = Label(frame_information, text='Погодная информация', bg='orange', font=100)
 info.pack()
 cityField = Entry(frame_input, bg='white', font=70)
