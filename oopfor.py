@@ -59,67 +59,92 @@
 
 
 
+# class A:
+#     def a(self):
+#         print('A')
+#
+# class B:
+#     def a(self):
+#         print('B')
+#
+# class C(B):
+#     def a(self):
+#         print('C')
+#
+# class D(C, A):
+#     def a(self):
+#         super(C, self).a()
+#         print(self.__class__.__mro__)
+#
+# # print(D.__mro__)
+# D().a()
 
-class Country:
-    # men_count = "I'm the default"
+# class Banck:
+#     def __init__(self, name, balance):
+#         self.name = name
+#         self.balance = balance
+#
+#     def get_balance(self):
+#         print(self.balance)
+#         return self.balance
+#
+#     def set_balance(self, value):
+#         print(self.balance + value)
+#         self.balance = self.balance + value
+#         return self.balance
+#
+#     my_balance = property()
+#     my_balance = my_balance.getter(get_balance)
+#     my_balance = my_balance.setter(set_balance)
+#     # my_balance = my_balance.deleter(del_balancr)
+#
+# a1 = Banck('Ivan', 123)
+# print(a1.__dict__)
+#
+# a1.my_balance
+# a1.my_balance = 1000
+# a1.my_balance
 
-    def __init__(self, demographics):
-        # print(self.demographics)
-        self.demographics = demographics
-        print(self.demographics)
+# def header(func):
+#     def inner(*args):
+#         print('<h1>')
+#         func(*args)
+#         print('/<h1>')
+#     return inner
+#
+# def table(func):
+#     def inner(*args):
+#         print('<table>')
+#         func(*args)
+#         print('/<table>')
+#     return inner
+#
+# @table
+# @header
+# def say(name, surname):
+#     print('Hello World!', name, surname)
+#
+# def buy():
+#     print('buy world!')
+# say('Piotr', 'Ivanov')
 
-    # @property
-    # def demographics(self):
-    #     return self.demographics
+def average_numbers():
+    value = 0
+    count = 0
+    def inner(number):
+        nonlocal value, count
+        value = value + number
+        count = count + 1
+        print(value, count)
+        return value / count
+    print(inner)
+    return inner
 
-    # @demographics.setter
-    # def demographics(self, birth_rate):
-    #     print(self.demographics, self.men_count, birth_rate)
-    #     self.men_count = self.demographics * birth_rate
-
-c = Country(0.3)
-# c()
-# c.demographics
-
-
-
-
-
-
-
-
-
-
-
-class Men:
-
-    age = 11
-    name = 'Ivan'
-    country = 'Italy'
-
-    def __init__(self, second_name, course):
-        self.second_name = second_name
-        self.course = course
-
-
-    @classmethod
-    def add_fio(cls):
-        return cls.second_name
-
-    @staticmethod
-
-
-print(Men.age)
-# m = Men('Ivanov', 456)
-# print(m)
-
-
-
-
-
-
-
-
+r1 = average_numbers()
+r1(1)
+r1(5)
+r1(13)
+print(average_numbers)
 
 
 

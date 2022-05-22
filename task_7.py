@@ -76,5 +76,5 @@ def fla(arr):
 #         else:
 #             c.append(elt)
 #     print(c)
-print(fla(b))
+print(fla(a))
 # print(flattenlist(x))

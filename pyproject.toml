@@ -8,6 +8,8 @@ authors = ["Vladislav.H <vkhrabrov94@gmail.com>"]
 python = "^3.8"
 requests = "^2.27.1"
 pytest = "^7.1.1"
+arrow = "^1.2.2"
+timeout = "^0.1.2"
 
 [tool.poetry.dev-dependencies]
 

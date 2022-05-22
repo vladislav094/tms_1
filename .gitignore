@@ -1,2 +1,6 @@
 .idea
 .python-version
+.vscode/
+.persondb.bak
+.persondb.dat
+

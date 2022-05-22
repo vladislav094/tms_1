@@ -173,10 +173,11 @@
 
 import random
 class Units:
-    """
-    Родительский класс
-    """
     def __init__(self, id, team):
+        """
+        :param id:
+        :param team:
+        """
         self.id = id
         self.team = team
 
